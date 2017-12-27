@@ -162,17 +162,79 @@ var itemList = document.querySelector('#items');
 
 
 
-var newDiv = document.createElement('div');
-newDiv.className = "newdivclass";
-newDiv.id = "newid";
-newDiv.setAttribute('title', 'newattr');
+// var newDiv = document.createElement('div');
 
-var newDivText = document.createTextNode('Hello JS Developer');
-newDiv.appendChild(newDivText);
+// newDiv.className = "newdivclass";
+// newDiv.id = "newid";
+// newDiv.setAttribute('title', 'newattr');
 
-var form = document.querySelector('header .container');
-var h2 = document.querySelector('header h1');
-form.insertBefore(newDiv, h2);
+// var newDivText = document.createTextNode('Hello JS Developer');
+// newDiv.appendChild(newDivText);
 
 
-console.log(newDiv)
+// var form = document.querySelector('header .container');
+// var h2 = document.querySelector('header h1');
+// form.insertBefore(newDiv, h2);
+
+
+// console.log(newDiv)
+
+
+// //Events
+
+// var button = document.getElementById('button').addEventListener('click', buttonClick)
+
+// function buttonClick(e) {
+// 	// document.getElementById('header-title').textContent = "Title Changed.....";
+// 	// document.querySelector('#main').style.backgroundColor = "#f4f4c4";
+// 	// console.log(e);
+// 	// console.log(e.target)
+// 	// console.log(e.target.id)
+// 	//console.log(e.target.className)
+// 	// console.log(e.target.classList)
+// 	// var output = document.getElementById('output');
+// 	// output.innerHTML = '<h3>' + e.target.id +'</h3>'
+// 	// console.log(e.type)
+
+// 	// console.log(e.clientX)
+// 	// console.log(e.clientY)
+// 	// console.log(e.offsetX)
+// 	// console.log(e.offsetY)
+// 	// console.log(e.altkey)
+
+// }
+
+
+// var button = document.getElementById('button');
+// var box = document.getElementById('box');
+
+// // button.addEventListener('click', runEvent);
+// // button.addEventListener('dblclick', runEvent);
+// // button.addEventListener('mousedown', runEvent);
+// button.addEventListener('mouseup', runEvent);
+
+
+// box.addEventListener('mouseenter', runEvent);
+// box.addEventListener('mouseleave', runEvent);
+
+// box.addEventListener('mouseover', runEvent);
+// box.addEventListener('mouseout', runEvent);
+
+
+var itemInput = document.querySelector('input[type="text"]');
+var form = document.querySelector('form');
+
+
+// itemInput.addEventListener('keydown', runEvent);
+// itemInput.addEventListener('focus', runEvent);
+
+itemInput.addEventListener('cut', runEvent);
+itemInput.addEventListener('paste', runEvent);
+
+function runEvent(e) {
+	console.log('EVENT TYPE:' +e.type);
+	document.body.style.display = 'none';
+	// console.log(e.target.value);
+	// document.getElementById('output').innerHTML = '<h3>'+e.target.value+'</h3>'
+	// box.style.backgroundColor = "rgb("+e.offsetX+", "+e.offsetY+", 40)";
+}
