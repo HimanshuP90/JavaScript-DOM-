@@ -11,5 +11,14 @@ class Vehicle {
 }
 
 var coolSkiVan = new Vehicle("cool ski van", 4);
+	coolSkiVan.describeYourself();
 
-coolSkiVan.describeYourself();
+//class Inheritance
+class SemiTruck extends Vehicle {
+	constructor() {
+		super("semi truck", 18)
+	}
+}
+
+var groceryStoreSemi = new SemiTruck();
+	groceryStoreSemi.describeYourself();
