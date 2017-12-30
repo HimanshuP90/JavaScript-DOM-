@@ -244,32 +244,75 @@
 
 
 //Get element's id
-var myElement = document.getElementById("abc");
-var myNewElement = document.createElement("li");
-// 	myElement.appendChild(myNewElement);
-// 	myNewElement.innerText = "Redux"
-
+// var myElement = document.getElementById("abc");
 // var myNewElement = document.createElement("li");
-// 	myElement.appendChild(myNewElement);
-// 	myNewElement.innerText = "HTML5"
+// // 	myElement.appendChild(myNewElement);
+// // 	myNewElement.innerText = "Redux"
 
-var secondItem = document.getElementsByTagName("li")[1];
-	myElement.insertBefore(myNewElement, secondItem);
-	myNewElement.innerHTML = "CSS3"
+// // var myNewElement = document.createElement("li");
+// // 	myElement.appendChild(myNewElement);
+// // 	myNewElement.innerText = "HTML5"
 
-var thirdItem = document.getElementsByTagName("li")[3];
-var myNewElement = document.createElement("li");
-	myElement.insertBefore(myNewElement, thirdItem);	
-	myNewElement.innerHTML = "React-Bootstrap"
+// var secondItem = document.getElementsByTagName("li")[1];
+// 	myElement.insertBefore(myNewElement, secondItem);
+// 	myNewElement.innerHTML = "CSS3"
+
+// var thirdItem = document.getElementsByTagName("li")[3];
+// var myNewElement = document.createElement("li");
+// 	myElement.insertBefore(myNewElement, thirdItem);	
+// 	myNewElement.innerHTML = "React-Bootstrap"
 
 
 
 
-var myPara = document.getElementById("para");
-var myNewPara = document.createElement("p");
-	console.log(myNewPara)
-	myNewPara.className = "paraClass";
-	myNewPara.id = "paraID";
-	myNewPara.innerHTML = "Hello I am new paragraph";
+// // var myPara = document.getElementById("para");
+// // var myNewPara = document.createElement("p");
+// // 	console.log(myNewPara)
+// // 	myNewPara.className = "paraClass";
+// // 	myNewPara.id = "paraID";
+// // 	myNewPara.innerHTML = "Hello I am new paragraph";
 
-	myPara.parentNode.insertBefore(myNewPara, myPara.previousSibling);
+// // 	myPara.parentNode.insertBefore(myNewPara, myPara.previousSibling);
+
+// function addParagraphs() { 
+    
+//     var myNewPara = document.createElement('p');
+
+//     myNewPara.innerHTML = "New paragraph added";
+//     myNewPara.style.color = "red";
+//     myNewPara.style.backgroundColor = "yellow";
+    
+//     var elem = document.getElementById("p1");
+  
+//     elem.parentNode.insertBefore(myNewPara, elem.previousSibling);
+    
+// }
+
+// document.addEventListener('mousemove', addParagraphs)
+
+
+
+function preventEvent() {
+	document.getElementById("myForm").onsubmit = function() {
+		if (document.getElementById("email").value == "") {
+			document.getElementById("errorMessage").style.color = "red";
+			document.getElementById("errorMessage").innerHTML = "Please provide at least an email address!";
+			return false;
+		} else {
+			document.getElementById("errorMessage").innerHTML = "";
+			return true;
+		}
+	}
+}
+
+
+window.onload = function() {
+	preventEvent();
+}
+
+
+
+/What is the Closure Compiler?
+
+
+The Closure Compiler is a tool for making JavaScript download and run faster. Instead of compiling from a source language to machine code, it compiles from JavaScript to better JavaScript. It parses your JavaScript, analyzes it, removes dead code and rewrites and minimizes what's left. It also checks syntax, variable references, and types, and warns about common JavaScript pitfalls.
