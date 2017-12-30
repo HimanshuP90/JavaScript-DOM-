@@ -92,7 +92,7 @@
 
 // ____________________Traversing the DOM___________________________
 
-var itemList = document.querySelector('#items');
+// var itemList = document.querySelector('#items');
 //parentNode
 // console.log(itemList.parentNode);
 // itemList.parentNode.style.backgroundColor = '#f4f4f4';
@@ -221,20 +221,55 @@ var itemList = document.querySelector('#items');
 // box.addEventListener('mouseout', runEvent);
 
 
-var itemInput = document.querySelector('input[type="text"]');
-var form = document.querySelector('form');
+// var itemInput = document.querySelector('input[type="text"]');
+// var form = document.querySelector('form');
 
 
-// itemInput.addEventListener('keydown', runEvent);
-// itemInput.addEventListener('focus', runEvent);
+// // itemInput.addEventListener('keydown', runEvent);
+// // itemInput.addEventListener('focus', runEvent);
 
-itemInput.addEventListener('cut', runEvent);
-itemInput.addEventListener('paste', runEvent);
+// itemInput.addEventListener('cut', runEvent);
+// itemInput.addEventListener('paste', runEvent);
 
-function runEvent(e) {
-	console.log('EVENT TYPE:' +e.type);
-	document.body.style.display = 'none';
-	// console.log(e.target.value);
-	// document.getElementById('output').innerHTML = '<h3>'+e.target.value+'</h3>'
-	// box.style.backgroundColor = "rgb("+e.offsetX+", "+e.offsetY+", 40)";
-}
+// function runEvent(e) {
+// 	console.log('EVENT TYPE:' +e.type);
+// 	document.body.style.display = 'none';
+// 	// console.log(e.target.value);
+// 	// document.getElementById('output').innerHTML = '<h3>'+e.target.value+'</h3>'
+// 	// box.style.backgroundColor = "rgb("+e.offsetX+", "+e.offsetY+", 40)";
+// }
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+//Get element's id
+var myElement = document.getElementById("abc");
+var myNewElement = document.createElement("li");
+// 	myElement.appendChild(myNewElement);
+// 	myNewElement.innerText = "Redux"
+
+// var myNewElement = document.createElement("li");
+// 	myElement.appendChild(myNewElement);
+// 	myNewElement.innerText = "HTML5"
+
+var secondItem = document.getElementsByTagName("li")[1];
+	myElement.insertBefore(myNewElement, secondItem);
+	myNewElement.innerHTML = "CSS3"
+
+var thirdItem = document.getElementsByTagName("li")[3];
+var myNewElement = document.createElement("li");
+	myElement.insertBefore(myNewElement, thirdItem);	
+	myNewElement.innerHTML = "React-Bootstrap"
+
+
+
+
+var myPara = document.getElementById("para");
+var myNewPara = document.createElement("p");
+	console.log(myNewPara)
+	myNewPara.className = "paraClass";
+	myNewPara.id = "paraID";
+	myNewPara.innerHTML = "Hello I am new paragraph";
+
+	myPara.parentNode.insertBefore(myNewPara, myPara.previousSibling);
